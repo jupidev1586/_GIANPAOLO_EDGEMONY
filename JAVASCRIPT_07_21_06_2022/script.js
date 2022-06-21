@@ -16,24 +16,27 @@
 const booksArray = ['bookOne', 'bookTwo','bookThree','bookFour','bookFive', 'bookSix', 'bookSeven'];
 
 const firstTask = booksArray.map((element, index, array) => {
-  console.log(index + ': '  + element);
-  return;
+  // console.log(index + ': '  + element);
+  return index + ': '  + element;
 });
 
-
+console.log(firstTask);
 // 2.
 const secondTask = booksArray.map((element, index, array) => {
-  console.log(array.length -1 - index);
-  return;
+  // console.log(array.length -1 - index);
+  return array.length -1 - index;
 });
 
 
-
+console.log(secondTask);
 
 // 3.
 const thirdTask = booksArray.map((element, index, array) => {
-  console.log(array.length -1 - index + ': '  + element);
-  return;
+  // console.log(array.length -1 - index + ': '  + element);
+  return array.length -1 - index + ': '  + element;
 });
+
+console.log(thirdTask);
+
 
 
