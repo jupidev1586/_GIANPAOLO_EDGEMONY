@@ -1,5 +1,3 @@
-// funzione con 2 params string e numero e ritorna la concatenzazione
-// array dispari almeno di 5 elementi.
 
 
 // 1. 
