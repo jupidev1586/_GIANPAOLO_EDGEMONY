@@ -105,71 +105,73 @@ function div(a, b) {
 
 
 
+const calculate = (methodFn, num1, num2) => {
+  return methodFn(num1, num2);
+}
 
-
-
+console.log(calculate(sum, 1, 3))
 
 // 4 -> Scriviamo una funzione che possa eseguire le 4 precedenti
 // es:
 // operation( sum, 1 , 3 ) -> 4
 // operation( div, 1 , 0 ) -> Errore: non divisibile per zero :(
-function calculate(operation, a, b) {
+// function calculate(operation, a, b) {
 
-  if (typeof a === 'number' && typeof b === 'number') {
-    if (operation === 'sum') {
-      console.log( a + b );
-      return a + b;
-    } else if (operation === 'sub') {
-      console.log( a - b );
-      return a - b;
-    } else if (operation === 'mul') {
-      console.log( a * b );
-      return a * b;
-    } else if (operation === 'div') {
-      if ( a != 0 && b != 0 ) {
-        console.log( a / b );
-        return a / b;
-      } else {
-        console.error( 'I numeri inseriti non sono divisibili tra loro, perchè uno dei 2 è uguale a 0' );
-      }
-    }
-  } else {
-    console.error( 'Non hai inserito degli argomenti validi. Non sono numeri.' );
-  }
+//   if (typeof a === 'number' && typeof b === 'number') {
+//     if (operation === 'sum') {
+//       console.log( a + b );
+//       return a + b;
+//     } else if (operation === 'sub') {
+//       console.log( a - b );
+//       return a - b;
+//     } else if (operation === 'mul') {
+//       console.log( a * b );
+//       return a * b;
+//     } else if (operation === 'div') {
+//       if ( a != 0 && b != 0 ) {
+//         console.log( a / b );
+//         return a / b;
+//       } else {
+//         console.error( 'I numeri inseriti non sono divisibili tra loro, perchè uno dei 2 è uguale a 0' );
+//       }
+//     }
+//   } else {
+//     console.error( 'Non hai inserito degli argomenti validi. Non sono numeri.' );
+//   }
   
-}
+// }
 
 
-document.addEventListener('keydown', function(event) {
-  switch(event.keyCode) {
-    case  97:
-      calculate('sum', 1, 3);  // key 1
-      break;
-    case  98:
-      calculate('sub', 3, 5);  // key 2
-      break;
-    case  99:
-      calculate('mul', 3, 7);  // key 3
-      break;
-    case  100:
-      calculate('div', 4, 2);  // key 4
-      break;
-    case  101:
-      calculate('div', 2, 0);  // key 5
-      break;
-    case  102:
-      calculate('sum', '2', 0);  // key 6
-      break;
-    case  103:
-      display(7);
-      break;
-    case  104:
-      display(8);
-      break;
-    case  105:
-      display(9);
-      break;
-    default:
-      console.log('Non hai selezionato alcuna operazione');
-  }
-});
+// document.addEventListener('keydown', function(event) {
+//   switch(event.keyCode) {
+//     case  97:
+//       calculate('sum', 1, 3);  // key 1
+//       break;
+//     case  98:
+//       calculate('sub', 3, 5);  // key 2
+//       break;
+//     case  99:
+//       calculate('mul', 3, 7);  // key 3
+//       break;
+//     case  100:
+//       calculate('div', 4, 2);  // key 4
+//       break;
+//     case  101:
+//       calculate('div', 2, 0);  // key 5
+//       break;
+//     case  102:
+//       calculate('sum', '2', 0);  // key 6
+//       break;
+//     case  103:
+//       display(7);
+//       break;
+//     case  104:
+//       display(8);
+//       break;
+//     case  105:
+//       display(9);
+//       break;
+//     default:
+//       console.log('Non hai selezionato alcuna operazione');
+//   }
+// });
