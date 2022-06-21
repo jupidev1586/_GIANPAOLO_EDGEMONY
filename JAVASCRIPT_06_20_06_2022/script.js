@@ -68,48 +68,13 @@ function div(a, b) {
 }
 
 
-// document.addEventListener('keydown', function(event) {
-//   switch(event.keyCode) {
-//     case  97:
-//       sum(1, 3);  // key 1
-//       break;
-//     case  98:
-//       sub(3, 5);  // key 2
-//       break;
-//     case  99:
-//       mul(3, 7);  // key 3
-//       break;
-//     case  100:
-//       div(4, 2);  // key 4
-//       break;
-//     case  101:
-//       div(2, 0);  // key 5
-//       break;
-//     case  102:
-//       display(6);
-//       break;
-//     case  103:
-//       display(7);
-//       break;
-//     case  104:
-//       display(8);
-//       break;
-//     case  105:
-//       display(9);
-//       break;
-//     default:
-//       console.log('Non hai selezionato alcuna operazione');
-//   }
-// });
-
-
 
 
 const calculate = (methodFn, num1, num2) => {
   return methodFn(num1, num2);
 }
 
-console.log(calculate(sum, 1, 3))
+console.log(calculate(div, 1, 0))
 
 // 4 -> Scriviamo una funzione che possa eseguire le 4 precedenti
 // es:
