@@ -16,3 +16,26 @@ h1 {
   border: 2px solid rgb(228, 96, 44);
 }
 
+html,
+body { height: 100%; }
+
+html { font-size: calc(22px + 1vw) }
+
+body {
+  display: grid;
+  background-color: #3D3D3B;
+  color: #F4F4F4;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+code {
+  font-family: "Roboto Mono", monospace;
+  color: #ED9C9C;
+  font-size: 0.75rem;
+}

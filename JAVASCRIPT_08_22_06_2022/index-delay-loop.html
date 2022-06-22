@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21.06.2022</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="container">
+    <p>
+      The code loops over the <code>names</code> array, displaying each name below.
+      Without <code>delayLoop()</code>, all names are looped over very quickly,
+      showing the last element - <code>Venus</code> - almost immediately.
+    </p>
+    
+    <p>
+      But with <code>delayLoop()</code>, each iteration is called 1 second
+      at a time. The delay length is configurable.
+    </p>
+    
+    <p id="output"></p>
+  </div>
+
+  <script src="./index-delay-loop.js"></script>
+
+</body>
+</html>

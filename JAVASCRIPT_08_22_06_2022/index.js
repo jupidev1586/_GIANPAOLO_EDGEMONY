@@ -44,6 +44,8 @@ console.log(evenFilteredArray);
 // ```
 // risultato: [1,2,5,6]
 // console.clear();
+
+// sol. 1
 const arrayCompared = [10, 1, 2, 5, 6];
 
 // const conditionFn = () => {
@@ -51,4 +53,13 @@ const arrayCompared = [10, 1, 2, 5, 6];
 // }
 const combinedArray = (element) => arrayCompared.includes(element);
 
-console.log(array.filter(combinedArray));
+console.log('filteredArrayCOmbined', array.filter(combinedArray));
+
+
+// sol.2
+const array2 = [10, 1, 2, 5, 6];
+const evenNumbers = array.filter((num) => num % 2 === 0);
+const commonNumbers = array.filter((num) => array2.indexOf(num) > -1);
+console.log('indexOf', commonNumbers);
+
+// console.log(array2.indexOf() > -1)
