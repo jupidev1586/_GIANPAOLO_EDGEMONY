@@ -6,7 +6,7 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 // forEach
 // Eseguire console.log() di ogni elemento di array
-const arrayLoop = array.forEach( (i, index, array) => {
+const arrayLoop = array.forEach( (item, index, array) => {
   console.log(array[index]);
 })
 
@@ -31,10 +31,24 @@ const arrayLooped = array.forEach( (item, index, array) => {
 // risultato: [2,4,6,8]
 
 
-
-
-const evenFliteredArray = array.filter( (number) => {
+const evenCondition = (number) => {
   return number % 2 === 0;
-});
+}
 
-console.log(evenFliteredArray);
+const evenFilteredArray = array.filter( evenCondition );
+
+console.log(evenFilteredArray);
+
+
+// Tenere solo i numeri in comune con questo array: `[10, 1, 2, 5, 6]`, usare utility come `Array.includes` oppure `Array.indexOf`.
+// ```
+// risultato: [1,2,5,6]
+// console.clear();
+const arrayCompared = [10, 1, 2, 5, 6];
+
+// const conditionFn = () => {
+//   return array.includes(1) && arrayCompared.includes(1);
+// }
+const combinedArray = (element) => arrayCompared.includes(element);
+
+console.log(array.filter(combinedArray));
