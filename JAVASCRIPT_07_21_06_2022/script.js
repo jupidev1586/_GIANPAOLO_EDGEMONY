@@ -17,26 +17,29 @@ const booksArray = ['bookOne', 'bookTwo','bookThree','bookFour','bookFive', 'boo
 
 const firstTask = booksArray.map((element, index, array) => {
   // console.log(index + ': '  + element);
-  return index + ': '  + element;
+  // return index+1 + ': '  + element;
+  return `${index + 1} - ${element}`;
 });
 
 console.log(firstTask);
 // 2.
-const secondTask = booksArray.map((element, index, array) => {
+const itemsToReverseIndex = booksArray.map((_, index, array) => {
   // console.log(array.length -1 - index);
   return array.length -1 - index;
 });
 
 
-console.log(secondTask);
+console.log(itemsToReverseIndex);
 
 // 3.
-const thirdTask = booksArray.map((element, index, array) => {
+const itemsToReverse = booksArray.map((element, index, array) => {
   // console.log(array.length -1 - index + ': '  + element);
-  return array.length -1 - index + ': '  + element;
+  const indexReversed = array.length -1 - index;
+  return array[indexReversed];
+  // return array.at(indexReversed);
 });
 
-console.log(thirdTask);
+console.log(itemsToReverse);
 
 
 
