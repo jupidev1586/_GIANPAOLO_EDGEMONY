@@ -30,19 +30,19 @@
   // clockMins();
   // clockSecs();
 
-  const clockTime = () => {
-    const hours = new Date().getHours();
-    const minutes = new Date().getMinutes();
-    const seconds = new Date().getSeconds();
-    console.log(hours, minutes, seconds);
-  }
+  // const clockTime = () => {
+  //   const hours = new Date().getHours();
+  //   const minutes = new Date().getMinutes();
+  //   const seconds = new Date().getSeconds();
+  //   console.log(hours, minutes, seconds);
+  // }
 
-  const arrayIntervals = [1, 5, 10];
+  // const arrayIntervals = [1, 5, 10];
 
-  arrayIntervals.forEach( (item) => {
-    setTimeout(clockTime, timeMs * item)
-    console.log(timeMs * item)
-  });
+  // arrayIntervals.forEach( (item) => {
+  //   setTimeout(clockTime, timeMs * item)
+  //   console.log(timeMs * item)
+  // });
 
   // const arrayClockLopped = () => {
   //   const hours = new Date().getHours();
@@ -95,7 +95,7 @@
 (function (){
 
 
-  // const arrayNumbers = [42, 23, 1, 7, 12, 99];
+  const arrayNumbers = [42, 23, 1, 7, 12, 99];
 
   // const arrayFn = arrayNumbers.forEach( (item, index, array) => {
   //   const timerId = setInterval( () => {
@@ -105,6 +105,21 @@
   //   }, 1000);
   // });
 
-  
+  const lista = [5,6,1,12,24,3,8,100,9];
+
+
+  const id = setInterval(() => {
+    if(lista.length > 0) {
+      lista.pop()
+    }
+    else {
+      stopInterval()
+    }
+  }, 220)
+
+  stopInterval = () => {
+    clearInterval(id)
+    console.log(lista, 'lista')
+  }
 
 })();
