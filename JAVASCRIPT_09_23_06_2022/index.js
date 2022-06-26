@@ -9,6 +9,50 @@
 (function (){
 
   const timeMs = 1000;
+  // const hours = new Date().getHours();
+  // .padStart(2, "0")
+  const getCurrentTime = () => `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`
+ 
+  const logCurrentTime = () => {
+    console.log(getCurrentTime())
+  }
+  // setTimeout(logCurrentTime, 1_000);
+  // setTimeout(logCurrentTime, 5_000);
+  // setTimeout(logCurrentTime, 10_000);
+
+  // [1, 5, 10].forEach( (time) => setTimeout(logCurrentTime, 1000 * time));
+
+
+  // setInterval( () => {
+  //   logCurrentTime();
+  // }, 1_000);
+
+  // new Int()
+
+  setInterval( () => {
+    document.body.innerHTML = `
+      <h2>Orario corrente</h2>
+      <h1>${getCurrentTime()}</h1>
+    `;
+  }, 1_000);
+
+
+
+let index = 0;
+const numbers = [42, 23, 1, 7, 12, 99].sort(() => Math.random() * -0.5 - 1); // metodo array shuffle
+
+
+const timerId = setInterval( () => {
+const currentNumber = numbers[index];
+  if (typeof currentNumber === 'undefined') {
+    clearInterval(timerId);
+    return;
+  }
+  console.log( currentNumber );
+  index++;
+}, 1_000);
+
+
 
   const clockHours = () => {
     setTimeout(() => {
@@ -30,21 +74,21 @@
   // clockMins();
   // clockSecs();
 
-  // const clockTime = () => {
-  //   const hours = new Date().getHours();
-  //   const minutes = new Date().getMinutes();
-  //   const seconds = new Date().getSeconds();
-  //   console.log(hours, minutes, seconds);
-  // }
+  const clockTime = () => {
+    const hours = new Date().getHours();
+    const minutes = new Date().getMinutes();
+    const seconds = new Date().getSeconds();
+    console.log(`${hours} : ${minutes} : ${seconds}`);
+  }
 
-  // const arrayIntervals = [1, 5, 10];
+  const arrayIntervals = [1, 5, 10];
 
   // arrayIntervals.forEach( (item) => {
   //   setTimeout(clockTime, timeMs * item)
-  //   console.log(timeMs * item)
+  //   // console.log(timeMs * item)
   // });
 
-  // const arrayClockLopped = () => {
+  // const arrayClockLooped = () => {
   //   const hours = new Date().getHours();
   //   const minutes = new Date().getMinutes();
   //   const seconds = new Date().getSeconds();
@@ -55,7 +99,7 @@
   //   });
   // }
 
-  // arrayClockLopped(clockHours, clockMins, clockSecs);
+  // arrayClockLooped();
 
   // const createInterval = function (method, interval) {
   //   method();
@@ -108,18 +152,18 @@
   const lista = [5,6,1,12,24,3,8,100,9];
 
 
-  const id = setInterval(() => {
-    if(lista.length > 0) {
-      lista.pop()
-    }
-    else {
-      stopInterval()
-    }
-  }, 220)
+  // const id = setInterval(() => {
+  //   if(lista.length > 0) {
+  //     lista.pop()
+  //   }
+  //   else {
+  //     stopInterval()
+  //   }
+  // }, 220)
 
-  stopInterval = () => {
-    clearInterval(id)
-    console.log(lista, 'lista')
-  }
+  // stopInterval = () => {
+  //   clearInterval(id)
+  //   console.log(lista, 'lista')
+  // }
 
 })();
