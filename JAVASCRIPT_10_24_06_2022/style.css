@@ -46,4 +46,10 @@ code {
   font-size: 16px;
   cursor: pointer;
   font-weight: 800;
+  display: inline-block;
+}
+
+#app > div {
+  width: 130px;
+  text-align: center;
 }
