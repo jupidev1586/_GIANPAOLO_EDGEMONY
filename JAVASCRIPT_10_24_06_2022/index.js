@@ -5,7 +5,7 @@ const $div = document.createElement('div');
 const $resultH1Cont = document.createElement('div');
 const $resultH1 =  document.createElement('h1');
 const appId = document.getElementById('app');
-
+$resultH1.innerHTML = 0;
 // Append elements
 const appendApp = appId.append($div);
 const appendResult = $div.append($resultH1);
@@ -23,8 +23,6 @@ let increment = 0;
 const incFn = () => {
   if (increment < 10) {
     increment++;
-  } else if (increment = 10) {
-    increment = 0;
   }
   $resultH1.innerHTML = increment;
 }
@@ -32,9 +30,7 @@ const incFn = () => {
 const decFn = () => {
   if (increment > 0) {
     increment--;
-  } else if (increment = 0) {
-    increment = 10;
-  }
+  } 
   $resultH1.innerHTML = increment;
 }
 
