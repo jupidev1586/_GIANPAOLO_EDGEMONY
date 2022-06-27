@@ -1,18 +1,7 @@
-## Esercizi
-Creare un piccolo counter
-Partiamo dal solo body in HTML
-```
-Generiamo da JS due bottoni ed un DIV
-Inseriamo gli elementi a schermo
-Ne div avremo sempre a schermo lo stato del nostro counter ("1" oppure "2" oppure "3", ...)
-Aggiungere al primo bottone la funzionalità di incremento
-Aggiungere al secondo bottone la funzionalità di decremento
-```
-Bonus:
-```
-mettiamo un limite di decremento a 0
-mettiamo un limite di incremento a 10
-```
-Super bonus:
-```
-Rimuovere il codice duplicato
+# Esercizio
+Sulla base dell'esercitazione del giorno, creare una pagina che mostri una navbar. Questa deve visualizzare:
+- Un nome utente, preso da prompt salvi sul localStorage
+- Lo stesso nome sarà visualizzato all'interno di questa navbar come testo
+- Gli elementi HTML utilizzati dovranno essere dichiarati via JavaScript
+- Bisogna fare un controllo (try) sul nome utente stesso, se non presente nel localStorage allora mostri un errore in console, e successivamente aggiunto (catch)
+
