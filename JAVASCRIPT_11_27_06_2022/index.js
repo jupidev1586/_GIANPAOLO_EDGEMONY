@@ -23,17 +23,16 @@ const loginSection = () => {
   pEl.textContent = 'Benvenuto, ' + (localStorage.getItem('username').toUpperCase());
 }
 
-const spinnerEl = document.querySelector('.cont-spinner');
+const spinnerEl = document.querySelector('.spinner');
 
 try {
   if(userPrompt === 'jupi') {
     loginSection();
   } else {
-    throw new Error(
-      `
-        ${alert('Username errato')}
-      `
-    )
+    `
+      ${alert('Username errato')}
+    `
+    throw new Error('Username errato!')
   }
 } catch (error) {
   console.error(error);

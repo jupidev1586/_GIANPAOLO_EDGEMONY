@@ -74,15 +74,15 @@ img {
   max-width: 100%;
   height: auto;
 }
-.cont-spinner {
+.spinner {
   position: fixed;
   top: 50%;
   left: 0;
   right: 0;
   transform: translateY(-50%);
-  width: 100%;
+  width: 150px;
   display: none;
-  text-align: center;
+  margin: 0 auto;
 }
 .pad-100 {
   padding: 100px;
