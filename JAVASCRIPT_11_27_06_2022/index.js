@@ -29,9 +29,7 @@ try {
   if(userPrompt === 'jupi') {
     loginSection();
   } else {
-    `
-      ${alert('Username errato')}
-    `
+    alert('Username errato');
     throw new Error('Username errato!')
   }
 } catch (error) {
