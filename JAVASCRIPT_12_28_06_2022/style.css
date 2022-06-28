@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #A10F15;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #E03535;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.tc-red {
+  color: #E03535;
+}
+.mt-2 {
+  margin-top: 30px;
+}
+.mt-3 {
+  margin-top: 100px !important;
+}
+.mt-4 {
+  margin-top: 7rem !important;
+}
+.my-4 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.mt-5 {
+  margin-top: 120px;
+}
+.d-block {
+  display: block;
+}
+.list-unstyled {
+  list-style-type: none;
+}
+@media (min-width: 992px) {
+  
+  .d-lg-flex {
+    display: flex;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.bg-white {
+  background: white;
+}
+.padded {
+  padding: 15px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.pad-100 {
+  padding: 100px;
+}
+@media (max-width: 991.98px) {
+  .pad-100 {
+    padding: 100px 15px;
+  }
+}
+.container { 
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row { 
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 120px;
+}
+@media (min-width: 768px) {
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 290px;
+  }
+}
+.col-4 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000000;
+  transition: all 0.6s ease;
+}
+.col-4 img:hover {
+  transform: scale(1.05)
+}
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 60px;
+}
+.title-01, .title-02,
+.priceMinor, .priceMajor
+{
+  margin-top: 60px
+}
+.header {
+  box-shadow: 0px 1px 10px 0px #333;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #333;color: #fff;
+}
+.footer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.navbar p {
+  font-weight: 800;
+}
+.footer {
+  border-top: 1px solid #fff;
+  background: #333;
+  color: #fff;
+  /* position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+}
+
+
+
+
