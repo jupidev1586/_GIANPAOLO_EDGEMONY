@@ -84,7 +84,16 @@ img {
   display: block;
   margin: 0 auto;
 }
-
+/* .spinner::after {
+  content:"";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(43, 41, 41, 0.8);
+} */
 .pad-100 {
   padding: 100px;
 }

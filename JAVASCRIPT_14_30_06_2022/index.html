@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FB-LIKE PURE JAVASCRIPT APP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Kdam+Thmor+Pro&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="friends"></section>
+  <section class="messages">
+    <div class="add-new-message">
+      <input type="text" class="input-sender form-control" id="input-sender" placeholder="Chi sei?">
+      <textarea class="input-text" id="input-text" placeholder="Scrivi il tuo messaggio" rows="4" cols="50"></textarea>
+      <button class="add-new-message-btn button button--primary button--block">Invio messaggio</button>
+    </div>
+    <div class="filter">
+      <h3 class="tc-light">Filtra per nome:</h3>
+      <input type="text" class="filter-input form-control bg--primary" id="filter-input" placeholder="Filtra per...">
+    </div>
+    <div class="delete-sec">
+      <h3 class="tc-light">Rimuovi post:</h3>
+      <input type="text" name="delete" id="delete" class="delete form-control" placeholder="Inserisci ID da rimuovere">
+      <button class="remove-post button button--primary">Rimuovi</button>
+    </div>
+    <div class="messages-list"></div>
+  </section>
+  <section class="empty"></section>
+  <script src="./script.js" type="module"></script>
+  <script src="./utils.js" type="module"></script>
+  <script src="./api.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <form id="formJavascript" name="formJavascript">
+    <input type="text" name="titleInput" id="titleInput" class="titleInput" placeholder="Inserisci il titolo della serie">
+    <input type="url" name="imgInput" id="imgInput" class="imgInput" placeholder="Inserisci l'immagine per la serie (url)">
+    <input type="text" name="yearInput" id="yearInput" class="yearInput" placeholder="Inserisci anno di produzione">
+    <button type='button' class="add-serie">Aggiungi serie</button>
+  </form>
+  
+
+  <label for="delete">Rimuovi serie:</label>
+  <input type="text" name="delete" id="delete" class="delete" placeholder="Inserisci ID da rimuovere">
+  <button class="remove-serie">Rimuovi serie</button>
+
+
+
+  <script src="./index.js" type="module"></script>
+  <script src="./utils.js" type="module"></script>
+  <script src="./api.js" type="module"></script>
+
+
+</body>
+</html>

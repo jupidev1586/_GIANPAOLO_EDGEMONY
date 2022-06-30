@@ -29,6 +29,18 @@ try {
           titleProducts_02.textContent = 'Prezzo >= 100';
           createElements(newCollectionEl, product.image, product.title, product.price)
         })
+
+        // data
+        //   .filter((product) => product.category === "electronics")
+        //   .map((product) =>
+        //     createElements(electronicEl, product.image, product.title, product.price)
+        //   );
+        // data
+        //   .filter((product) => product.rating.count >= 200)
+        //   .map((product) =>
+        //     createElements(overEl, product.image, product.title, product.price)
+        //   );
+
     })
     .then(() => loadingEl.style.display = 'none')
   } else {
