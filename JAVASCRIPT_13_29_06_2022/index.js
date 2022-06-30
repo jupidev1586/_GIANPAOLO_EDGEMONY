@@ -85,14 +85,14 @@ addSerieBtnEl.addEventListener("click", () => {
 // })
 
 
-const serieTvBody = {};
-const inputEls = document.querySelectorAll('input');
-const btnEl = document.querySelector('button');
+// const serieTvBody = {};
+// const inputEls = document.querySelectorAll('input');
+// const btnEl = document.querySelector('button');
 
-inputEls.forEach(input => input.addEventListener('input', (e) => {
-  serieTvBody[input.id] = e.target.value;
-}));
-btnEl.addEventListener('click', () => console.log(serieTvBody));
+// inputEls.forEach(input => input.addEventListener('input', (e) => {
+//   serieTvBody[input.id] = e.target.value;
+// }));
+// btnEl.addEventListener('click', () => console.log(serieTvBody));
 
 // const allInputs = qAll('input');
 
