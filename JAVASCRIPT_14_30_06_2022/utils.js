@@ -2,6 +2,8 @@ const c = (el) => document.createElement(el);
 
 const q = (el) => document.querySelector(el);
 
+const qAll = (el) => document.querySelectorAll(el);
+
 const createCard = (parent, imgLink, title, price) => {
   const wrapperEl = c('div');
   const titleEl = c('h3');
@@ -44,14 +46,17 @@ const createMessageEl = (parent, text, sender, date) => {
   const dataPar = c('p');
 
   wrapper.className = 'messageCard';
+  textPar.className = 'message-par';
+  senderPar.className = 'sender-par';
+  dataPar.className = 'date-par';
   textPar.textContent = text;
   senderPar.textContent = sender;
-  // dataPar.textContent = date.split('T')[0].split('-').reverse().join('-');
-  dataPar.textContent = date;
+  dataPar.textContent = date.split('T')[0].split('-').reverse().join('-');
+  // dataPar.textContent = date;
 
   wrapper.append(textPar, senderPar, dataPar);
   parent.appendChild(wrapper);
 }
 
 
-export { c, q, createCard, createFriendEl, createMessageEl };
+export { c, q, qAll, createCard, createFriendEl, createMessageEl };
