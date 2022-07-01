@@ -23,7 +23,7 @@ GET('https://edgemony-backend.herokuapp.com/friends').then((friendList) => {
 
 // Messages
 GET('https://edgemony-backend.herokuapp.com/messages').then((messagesList) => {
-  messagesList.reverse().map(({text, sender, date}) => createMessageEl(messagesListEl, text, sender, date)) // Questo è identico a quello che succede in riga 11
+  messagesList.reverse().map(({text, sender, date}) => createMessageEl(messagesListEl, text, sender, date)) 
 })
 
 inputTextEl.addEventListener('input', (e) => messageBodyPost.text = e.target.value);
@@ -44,7 +44,7 @@ addMsgBtn.addEventListener('click', () => {
 
 const removeSerieBtnEl = q('.remove-post');
 const deleteInputEl = q('.delete');
-// ------------ il nuovo DELETE tramite funzione async/await, il vecchio sta sopra commentato a riga 43
+
 deleteInputEl.addEventListener('input', (eventInput) => {
   console.log(eventInput);
   removeSerieBtnEl.addEventListener('click', (eventClick) => {
