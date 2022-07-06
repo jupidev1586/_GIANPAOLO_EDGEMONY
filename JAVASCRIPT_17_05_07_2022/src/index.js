@@ -74,27 +74,8 @@
 /*///////////////////////////////////////////////////////////////////////////////////// */
 
 
-const product = {
-  id: 1,
-  name: "TV",
-  price: 40,
-  addons: {
-    decoder: 10,
-    qled: 40,
-    stereo: 20,
-  },
-};
 
-const prova = Object.values(product.addons);
 
-let fullOptionalPrice = 0;
-const total = prova.forEach((e) => {
-  fullOptionalPrice += e;
-});
-const total2 = fullOptionalPrice + product.price;
-console.log(total2);
-
-/* ---------------------------------------------------------------- */
 
 const getProductHTML = (product) => {
   const { name, price, img } = product;
