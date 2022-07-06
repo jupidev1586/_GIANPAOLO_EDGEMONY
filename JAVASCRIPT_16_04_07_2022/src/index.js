@@ -72,23 +72,30 @@
   const obj1 = { foo: "bar" };
   const obj2 = { name: "Mio nome" };
 
-  const mergeTwoObjects = function (firstObj, secondObj, newProp) {
-    return { ...firstObj, ...secondObj, [newProp]: "value" };
-  };
+  // const mergeTwoObjects = function (firstObj, secondObj, newProp) {
+  //   return { ...firstObj, ...secondObj, [newProp]: "value" };
+  // };
 
-  console.log(mergeTwoObjects(obj1, obj2, "name"));
+  // console.log(mergeTwoObjects(obj1, obj2, "name"));
+  
+  const mergeTwoObjects = function (firstObj, secondObj, newProp, value) {
+    return { ...firstObj, ...secondObj, [newProp]: value };
+  };
+  
+  console.log('mergeTwoObjects', mergeTwoObjects(obj1, obj2, "price", 375));
+
 
   // Destructuring  esercizio 2
   const array = ["a", "ab", "jgwroifmwe,fwfe", "nfmwfr"];
-  const filterdArray = array.filter((string) => {
-    // possiamo anche mettere ({length}) => length >= 10
-    const { length } = string;
-    return length >= 10;
-  });
-
+  // const filteredArray = array.filter((string) => {
+  //   // possiamo anche mettere ({length}) => length >= 10
+  //   const { length } = string;
+  //   return length >= 10;
+  // });
+  const filteredArray = array.filter(({ length }) => length >= 10 );
   // filterdArray.filter(({length}) => length >= 10);
 
-  console.log(filterdArray);
+  console.log('filteredArray', filteredArray);
   
 
   // Get/Set  esercizio 3
