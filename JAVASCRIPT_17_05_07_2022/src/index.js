@@ -1,19 +1,19 @@
-// const product = {
-//   id: 1,
-//   name: "TV",
-//   price: 40,
-//   addons: {
-//     decoder: 10,
-//     qled: 40,
-//     stereo: 20
-//   }
-// };
-// const fullOptionalPrice = Object.values(product.addons);
-// console.log(fullOptionalPrice);
+const product = {
+  id: 1,
+  name: "TV",
+  price: 40,
+  addons: {
+    decoder: 10,
+    qled: 40,
+    stereo: 20
+  }
+};
+const fullOptionalPrice = Object.values(product.addons);
+console.log(fullOptionalPrice);
 
-// const sumValues = fullOptionalPrice.reduce((a, b) => a + b);
+const sumValues = fullOptionalPrice.reduce((a, b) => a + b);
 
-// console.log("Addition addons", sumValues);
+console.log("Addition addons", sumValues);
 
 
 // ----------------------------------------------------------------
@@ -121,18 +121,31 @@ const shop = {
 
     const productsHTML = this.products.map(getProductHTML).join("");
     productsEl.innerHTML = `
-         <ul>${productsHTML}</ul>
+      <p>${shop.page}</p>
+      <ul>${productsHTML}</ul>
      `;
   },
 };
 
 let button = document.querySelectorAll("button");
 
-button.forEach((button) => {
+
+
+button.forEach((button, index) => {
+  button.setAttribute('id', index + 1);
   button.addEventListener("click", () => {
-    shop.page = button.getAttribute("id");
+    shop.page = button.id;
   });
 });
+
+// button.forEach((button, index) => {
+//   button.id = index +1;
+//   button.addEventListener("click", () => {
+//     const newPage = Number(this.innerText);
+//     shop.page = button.id;
+//   });
+// });
+
 
 shop.products = [
   {
