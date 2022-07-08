@@ -57,10 +57,11 @@
             const { name, price, stock } = product;
             //
             return `
-            <li class="product" id="${(this.page * this.perPage) + index}"
+            <li class="product" 
+              id="${(this.page * this.perPage) + index}"
               data-name="${name}"
               data-price="${price}€"
-              data-stock="${stock} in magazzino">
+              data-alert="${stock} in magazzino">
               <h3>${name}</h3> ${price}€ - 
               <small>${stock} in magazzino</small>
               </li>

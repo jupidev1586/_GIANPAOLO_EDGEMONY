@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+
+.task-list li {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.task-list li input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* input di tipo checkbox dentro il li, solo che checked */
+.task-list li input[type="checkbox"]:checked {
+  margin-right: 1rem;
+}
+
+/* uno span, dopo un input di tipo checkbox dentro il li, solo che checked */
+.task-list li input[type="checkbox"]:checked ~ span {
+  text-decoration: line-through;
+}
