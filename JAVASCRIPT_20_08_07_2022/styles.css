@@ -1,0 +1,7 @@
+.task-list {
+  padding: 0
+}
+
+.task-list li {
+  display: block;
+}
