@@ -1,4 +1,4 @@
-
+const spinnerLoader = document.querySelector('.loading');
 const formEl = document.querySelector(".todo-form");
 const inputEl = formEl.querySelector("input");
 const listEl = document.querySelector(".task-list"); // lista
@@ -15,10 +15,11 @@ formEl.addEventListener("submit", function (event) {
   const apiURL = `${BASE_API_URL}/${searchFormatted}`;
 
   console.log("calling:", apiURL);
-
+  spinnerLoader.style.display = 'block'
   fetch(apiURL)
   .then((res) => {
     console.log({ res });
+    
     const json = res.json();
     console.log({ json });
     return json;
@@ -30,12 +31,14 @@ formEl.addEventListener("submit", function (event) {
     .map(item => `<li>${item.title}</li>`) 
     .join("")
   })
+  .then( () => spinnerLoader.style.display = 'none')
   .catch((err) => {
     console.error(err);
     listEl.innerHTML = `<li>C'è stato un errore, riprovare!</li>`;
     return []; // array vuoto
   })
   .finally();
+
   formEl.reset();
 });
 

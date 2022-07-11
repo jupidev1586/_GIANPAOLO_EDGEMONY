@@ -1,7 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  font-family: 'Exo 2', sans-serif;
+  color: white
+}
+.loading {
+  display: none;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 200px;
+  /* transform: translateY(-50%); */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.loading:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #cef;
+  border-color: rgb(8, 73, 105) transparent rgb(62, 170, 224) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .task-list {
   padding: 0
 }
 
 .task-list li {
   display: block;
+}
+
+input {
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem .45rem;
+  font-size: 14px
+}
+
+.button {
+	-webkit-appearance: none;
+	border: none;
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 160px;
+	line-height: 0.83333;
+	font-weight: 700;
+	letter-spacing: 0.267em;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 2px;
+	transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.05s;
+	cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+	outline: 0;
+	color: #fff;
+	background: #1bacdb;
+	text-decoration: none;
+}
+
+.button--primary {
+	background: #1bacdb;
+	border: 1px solid #1bacdb;
+	color: #fff;
+}
+
+.button--primary:hover {
+	color: #1bacdb;
+	background: #fff;
+	text-decoration: none;
+}
+
+.button--block {
+	display: block;
+	width: 100%;
 }

@@ -49,14 +49,12 @@ body {
 .button {
 	-webkit-appearance: none;
 	border: none;
-	min-width: 180px;
 	display: inline-block;
 	vertical-align: middle;
 	min-width: 160px;
 	line-height: 0.83333;
 	font-weight: 700;
 	letter-spacing: 0.267em;
-	text-indent: 0.267em;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 1.5em 1.6em;
