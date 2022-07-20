@@ -1,0 +1,30 @@
+.Footer {
+  margin-top: 40px;
+  box-shadow: 0 0 2px rgb(0 0 0 / 10%);
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Footer__list {
+  display: flex;
+  gap: 20px;
+  /* justify-content: flex-end; */
+  list-style-type: none;
+  padding: 0
+}
+
+.Footer__list a {
+  color: lightseagreen;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Footer__list a:hover {
+  color: rgb(10, 101, 96);
+}
+

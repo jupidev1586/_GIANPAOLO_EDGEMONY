@@ -1,0 +1,14 @@
+.Gallery { 
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Gallery img {
+  border-radius: 6px;
+}
+@media (min-width: 992px) { 
+  .Gallery { 
+    flex-direction: row;
+  }
+}
