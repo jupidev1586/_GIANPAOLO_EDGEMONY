@@ -1,0 +1,20 @@
+.header {
+  box-shadow: 0px 1px 10px 0px #333;
+  background-color: #1f1f1f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10
+}
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.navbar li {
+  padding: 15px 8px;
+  list-style: none;
+  display: inline;
+}
