@@ -1,0 +1,18 @@
+.CardListStatic {
+  margin: 45px 20px 0;
+}
+
+.CardListStatic__top {
+  width: 100%;
+  text-align: left;
+  font-size: 1.8rem;
+  font-family: 'Exo 2', sans-serif;
+  margin-bottom: 30px
+}
+
+.CardListStatic__list {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
