@@ -1,0 +1,26 @@
+.App {
+  color: rgb(24, 24, 24);
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.App__friends {
+  margin-right: 30px;
+}
+.App_messages {
+  padding: 20px;
+  width: 800px;
+}
+@media (max-width: 410px) {
+  .App_messages {
+    width: 150px;
+  }
+  
+  .App__friends {
+    display: inline-block;
+  }
+}
+
+
+
+

@@ -1,0 +1,30 @@
+.Friend {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.Friend__cont_photo {
+  height: 50px;
+  box-shadow: 1px 1px 3px 4px #ccc;
+  border-radius: 100%;
+  overflow: hidden;
+  padding-top: 5px;
+  margin: 10px 0 5px;
+}
+
+@media (min-width: 991.98px) {
+  .Friend {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .Friend__cont_photo {
+    height: 50px;
+  }
+}
+
+
+

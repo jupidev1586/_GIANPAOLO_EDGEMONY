@@ -1,0 +1,12 @@
+.AddMessage {
+  margin-bottom: 40px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.AddMessage input {
+  padding: 10px 20px;
+}
+
