@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { POST } from '../../utils/api.js';
-
 import Button from '../Button';
 import './index.css';
 
-const AddMessage = () => {
+const AddMessage = ({ isRenderedList, onAddButton }) => {
   // Controlled component!!! - Forms e input
   const [messageText, setMessageText] = useState('');
   const [sender, setSender] = useState('');
@@ -20,9 +19,9 @@ const AddMessage = () => {
       })
       .then(() => {
         setMessageText('');
-        setSender('')
+        setSender('');
+        onAddButton(!isRenderedList);
       })
-      .then(() =>  window.location.reload(false))
     }
   }
 
@@ -31,7 +30,7 @@ const AddMessage = () => {
       <input
         className="AddMessage__text"
         type="text"
-        placeholder="Scrivi il messaggio..."
+        placeholder="Write a message..."
         value={ messageText }
         onChange={(e) => setMessageText(e.target.value)}
         required
@@ -39,12 +38,12 @@ const AddMessage = () => {
       <input
         className="AddMessage__sender"
         type="text"
-        placeholder="Autore..."
+        placeholder="Author..."
         value={ sender }
         onChange={(e) => setSender(e.target.value)}
         required
       />
-      <Button type="submit" textContent='Invia' color='#ff9032' />
+      <Button type="submit" btnTextContent='POST' bgColor='tomato' color='white' width='100%'/>
     </form>
   )
 }

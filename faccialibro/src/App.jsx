@@ -1,17 +1,39 @@
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import AddFriend from './components/AddFriend';
 import AddMessage from './components/AddMessage';
-import FriendList from './components/FriendList'
-import MessageCardList from './components/MessageCardList'
+import FriendCardList from './components/FriendCardList';
+import MessageCardList from './components/MessageCardList';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
 import './App.css';
 
+
+library.add(fas);
+
 function App() {
+  const [isRenderedList, setRenderedList] = useState(false);
+  const [searchValue, setSearchValue] = useState();
+  
   return (
     <div className="App">
+      <Navbar />
       <div className="App__friends">
-        <FriendList/>
+        <h3>My friends</h3>
+        <FriendCardList isRenderedList={isRenderedList} filterMsgFriends={setSearchValue} searchValue={searchValue} />
+        <h4>Add a friend</h4>
+        <AddFriend isRenderedList={ isRenderedList } onAddButton={ setRenderedList } />
       </div>
       <div className="App_messages">
-        <AddMessage />
-        <MessageCardList/>
+        <h3>Add a message</h3>
+        <AddMessage isRenderedList={ isRenderedList } onAddButton={ setRenderedList }/>
+        <div className="flexDiv">
+          <h4>Friendlist search</h4>
+          <input onChange={(e) => setSearchValue(e.target.value)} type="text" className="filterSearch" placeholder="Search by friend..."></input>
+        </div>
+        <MessageCardList filterValue={searchValue} isRenderedList={ isRenderedList } setRenderedList={setRenderedList}/>
       </div>
     </div>
   );

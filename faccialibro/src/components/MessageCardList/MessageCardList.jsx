@@ -1,31 +1,32 @@
 import { useState, useEffect } from 'react';
 import MessageCard from '../MessageCard';
-import { GET, DELETE } from '../../utils/api';
+import { GET } from '../../utils/api';
 import './index.css';
 
-const MessageCardList = () => {
+const MessageCardList = ({ isRenderedList, setRenderedList, filterValue }) => {
   const [messageList, setMessageList] = useState([]);
 
+  const dateSort = (a, b) => a.date < b.date ? 1 : -1;
+  
   useEffect(() => {
-    GET('messages', messageList)
-      .then(data => setMessageList(data))
-  }, []);
+    GET('messages')
+    .then((data) => {
+      if (filterValue) {
+        setMessageList(data.filter((message) => message.sender.toLowerCase().includes(filterValue.toLowerCase())).sort((a, b) => dateSort(a,b)));
+      } else {
+        setMessageList(data.sort((a, b) => dateSort(a,b)))
+      }
+    })
+  }, [isRenderedList, filterValue]);
+
+ 
 
   return (
     <div className="MessageCardList">
       {
         messageList.length
-          ? messageList.map(message => {
-            return (
-              <MessageCard 
-                textContent={ message } 
-                key={ message.id } 
-                onDeleteClick={ () => DELETE('https://edgemony-backend.herokuapp.com/messages', message.id)
-                .then(() =>  window.location.reload(false)) }
-              />
-            )
-          })
-          : <p>Loading...</p>
+        ? messageList.map(message => <MessageCard isRenderedList={isRenderedList} onDeleteBtn={setRenderedList} textContent={ message } key={ message.id }/>)
+        : <p>Loading...</p>
       }
     </div>
   )

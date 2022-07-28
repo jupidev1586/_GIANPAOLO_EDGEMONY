@@ -1,8 +1,22 @@
+import { useState } from 'react';
+import { DELETE } from '../../utils/api';
+import Modal from '../Modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.css';
 
-const MessageCard = ({textContent, onDeleteClick}) => {
+const MessageCard = ({textContent, isRenderedList, onDeleteBtn}) => {
+  const [isModalVisibile, setModalVisibility] = useState(false);
+
+  const onModalConfirm = () => {
+    DELETE('messages', textContent.id)
+      .then(() => onDeleteBtn(!isRenderedList))
+  }
+
   return (
-    <div className="MessageCard" onClick={onDeleteClick}>
+    <div className="MessageCard">
+      <button onClick={() => setModalVisibility(true)} className="MessageCard__delete">
+        <FontAwesomeIcon icon="fa-solid fa-xmark" />
+      </button>
       <p className="MessageCard__text">
         { textContent.text }
       </p>
@@ -14,6 +28,8 @@ const MessageCard = ({textContent, onDeleteClick}) => {
           { textContent.date }
         </p>
       </div>
+      { isModalVisibile 
+        && <Modal modalTextContent="Vuoi cancellare il messaggio?" onModalConfirm={onModalConfirm} setModalVisibility={setModalVisibility} />}
     </div>
   )
 }
