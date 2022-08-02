@@ -7,10 +7,11 @@ import './index.css';
 const FriendCardList = ({filterMsgFriends}) => {
   const [friendList, setFriendList] = useState([]);
   const [filterBtnVisible, setFilterBtnVisible] = useState(false);
+  const [isRenderedList, setRenderedList] = useState(false);
 
   useEffect(() => {
     GET('friends').then(data => setFriendList(data));
-  }, []);
+  }, [isRenderedList]);
 
   return (
     <div className="FriendCardList">
@@ -25,7 +26,7 @@ const FriendCardList = ({filterMsgFriends}) => {
       }
       {
         friendList.length
-          ? friendList.map(friend => <FriendCard key={friend.id} friendPhoto={friend.photo}
+          ? friendList.map(friend => <FriendCard key={friend.id} setRenderedList={setRenderedList} friendPhoto={friend.photo}
             onHandleClick={() => {
             filterMsgFriends(friend.name)
             setFilterBtnVisible(true)

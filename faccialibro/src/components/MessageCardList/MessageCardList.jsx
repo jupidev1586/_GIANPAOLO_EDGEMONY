@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import MessageCard from '../MessageCard';
 import { GET } from '../../utils/api';
+import Button from '../Button/Button';
 import './index.css';
 
 const MessageCardList = ({ isRenderedList, setRenderedList, filterValue }) => {
@@ -23,6 +24,7 @@ const MessageCardList = ({ isRenderedList, setRenderedList, filterValue }) => {
 
   return (
     <div className="MessageCardList">
+      <Button btnTextContent="Update list" width='100%' bgColor='#ccc' onHandleClick={() => setRenderedList(!isRenderedList)}/>
       {
         messageList.length
         ? messageList.map(message => <MessageCard isRenderedList={isRenderedList} onDeleteBtn={setRenderedList} textContent={ message } key={ message.id }/>)
