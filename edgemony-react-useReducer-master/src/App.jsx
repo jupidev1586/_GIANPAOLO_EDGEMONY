@@ -20,14 +20,6 @@ function App() {
     }
   }
 
-  // const clickForward = (data) => {
-  //   setAdvice(data.advice +1);
-  // }
-
-  // const clickBack = () => {
-  //   setAdvice(data.advice -1);
-  // }
-
   return (
     <div className="App">
       <div className="App_reducer">
