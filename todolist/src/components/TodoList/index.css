@@ -1,0 +1,30 @@
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.TodoList input, button {
+  padding: 8px 12px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(215, 215, 215);
+  color: rgb(30, 105, 218);
+  outline: none;
+}
+
+.TodoList button {
+  background-color: rgb(30, 105, 218);
+  color: white;
+  cursor: pointer;
+}
+
+.TodoList button:hover {
+  color: rgb(36, 81, 148);
+}
+
+.TodoList button:active {
+  color: rgb(36, 81, 148);
+}
