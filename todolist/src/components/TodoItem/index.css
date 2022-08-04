@@ -1,3 +1,24 @@
 .TodoItem {
   border-bottom: 1px solid rgb(215, 215, 215);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.TodoItem__flexDiv {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 20%;
+  gap: 10px;
+}
+.TodoItem__flexDiv p {
+  font-size: 12px;
+}
+.TodoItem__header {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { memo } from 'react';
+import './index.css';
 
 const Form = ({ state, onChange, children }) => {
 
@@ -32,4 +33,4 @@ const Form = ({ state, onChange, children }) => {
   );
 };
 
-export default Form;
+export default memo(Form);

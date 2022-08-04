@@ -1,10 +1,12 @@
 .App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: rgb(42, 42, 42);
   text-align: center;
   background-color: ghostwhite;
+  padding: 150px 15px;
+  height: 100vh
+}
+
+.todoItems {
+  max-width: 600px;
+  margin: 0 auto;
 }

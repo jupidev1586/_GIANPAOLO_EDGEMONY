@@ -34,7 +34,7 @@ const reducer = (state, action) => {
     }
     
     case 'DeleteTodo': {
-      todos = todos.filter((obj) => obj.id != payload);
+      todos = todos.filter((obj) => obj.id !== Number(payload));
       break;
     }
     default:
@@ -77,19 +77,19 @@ function App() {
       <Form state={state} onChange={handleInputChange}>
         <Button onClick={handleAddDispatch}>Aggiungi</Button>
       </Form>
-
-      { 
-        state.todos.map((obj, index) => {
-          return (
-           <TodoItem
-              key={'Todolist' + index}
-              todoData={obj}
-              onClick={handleDeleteDispatch}
-            />
-          );
-        })
-      }
-
+      <div className="todoItems">
+        { 
+          state.todos.map((obj, index) => {
+            return (
+            <TodoItem
+                key={'Todolist' + index}
+                todoData={obj}
+                onClick={handleDeleteDispatch}
+              />
+            );
+          })
+        }
+      </div>
     </div>
   );
 }

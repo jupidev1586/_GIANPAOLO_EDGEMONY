@@ -1,4 +1,6 @@
 import React from 'react';
+import { memo } from 'react';
+import './index.css';
 
 const Button = ({ onClick, children }) => {
   return (
@@ -9,4 +11,4 @@ const Button = ({ onClick, children }) => {
   );
 };
 
-export default Button;
+export default memo(Button);

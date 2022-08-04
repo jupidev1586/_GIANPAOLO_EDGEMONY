@@ -1,3 +1,12 @@
 .Form {
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto 60px;
+  gap: 10px;
+}
+.Form input {
+  padding: 10px 5px;
+  border-radius: 6px;
 }
