@@ -1,0 +1,32 @@
+body {
+  background-color: #333;
+  color: whitesmoke;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+  color: whitesmoke;
+}
+
+.Navbar {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0 15px
+}
+.Navbar ul {
+  padding: 0;
+  margin: 0;
+  text-align: center
+}
+
+.Navbar li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.Navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 500;
+}
