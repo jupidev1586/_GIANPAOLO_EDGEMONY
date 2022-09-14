@@ -1,6 +1,9 @@
 .Navbar {
   border-bottom: 1px solid #ccc;
   padding: 10px 0 15px;
+  .title {
+    text-align: center;
+  } 
   ul {
     padding: 0;
     margin: 0;

@@ -10,6 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav className={ styles.Navbar }>
+      <h1 className={ styles.title }>App Recipes</h1>
       <ul>
         {links.map(({ href, label, title }) => (
           <li key={href}>
