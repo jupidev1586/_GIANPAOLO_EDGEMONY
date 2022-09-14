@@ -19,7 +19,7 @@ const MainInput = ({ input, setInput }) => {
 
   return (
     <form className="MainInput" onSubmit={onHandleSubmit}>
-      <input ref={inputRef} onChange={onHandleInput} type="text" minLength="6" maxLength="6"/>
+      <input ref={inputRef} onChange={onHandleInput} type="text" maxLength="6"/>
       <button type="submit">
         <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
       </button>
