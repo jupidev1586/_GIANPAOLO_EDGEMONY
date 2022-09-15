@@ -1,0 +1,26 @@
+.MealListItem {
+  position: relative;
+  text-align: center;
+
+  .thumbnail {
+    border-radius: .4rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  .title {
+    font-size: .8rem;
+    font-weight: 500;
+    margin: .5em 0;
+  }
+
+  .link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+}
